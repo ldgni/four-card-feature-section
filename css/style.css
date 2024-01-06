@@ -1,0 +1,213 @@
+:root {
+  --clr-bg: #fafafa;
+  --clr-primary: #4d4f62;
+  --clr-supervisor: #44d3d2;
+  --clr-team-builder: #ea5454;
+  --clr-karma: #fcae4a;
+  --clr-calculator: #549ef2;
+
+  --ff-primary: "Poppins", sans-serif;
+  --fs-base: 0.8125rem;
+  --fw-base: 400;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraLight.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* GENERAL */
+
+body {
+  background-color: var(--clr-bg);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+  color: var(--clr-primary);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 33.75rem;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: 275;
+  letter-spacing: 0.01044rem;
+}
+
+.header__subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01044rem;
+  margin-bottom: 0.81rem;
+}
+
+.header__text {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0065rem;
+  opacity: 0.5;
+  margin-bottom: 4.75rem;
+}
+
+/* MAIN */
+
+.main__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.06rem;
+}
+
+.card__text {
+  line-height: 1.4375rem;
+  letter-spacing: 0.00563rem;
+  opacity: 0.5;
+  margin-bottom: 2.06rem;
+}
+
+.card__icon {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.card--supervisor {
+  border-top: 0.222rem solid var(--clr-supervisor);
+}
+
+.card--team-builder {
+  border-top: 0.222rem solid var(--clr-team-builder);
+}
+
+.card--karma {
+  border-top: 0.222rem solid var(--clr-karma);
+}
+
+.card--calculator {
+  border-top: 0.222rem solid var(--clr-calculator);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 60rem) {
+  .header__title {
+    font-size: 2.25rem;
+    letter-spacing: 0.01563rem;
+  }
+
+  .header__subtitle {
+    font-size: 2.25rem;
+    letter-spacing: 0.01563rem;
+  }
+
+  .header__text {
+    margin-bottom: 4rem;
+  }
+
+  .main__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.88rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card__title {
+    margin-bottom: 0.38rem;
+  }
+
+  .card__text {
+    max-width: 17.875rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card--supervisor {
+    grid-row: span 2 / span 2;
+    align-self: center;
+    border-top: 0.25rem solid var(--clr-supervisor);
+  }
+
+  .card--team-builder {
+    border-top: 0.25rem solid var(--clr-team-builder);
+  }
+
+  .card--karma {
+    order: 2;
+    border-top: 0.25rem solid var(--clr-karma);
+  }
+
+  .card--calculator {
+    grid-row: span 2 / span 2;
+    align-self: center;
+    border-top: 0.25rem solid var(--clr-calculator);
+  }
+}
