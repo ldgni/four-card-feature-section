@@ -35,13 +35,12 @@ body {
   font-size: 0.8125rem;
   display: grid;
   place-content: center;
-  min-height: 100vh;
   padding: 5.31rem 2rem 4.88rem 2rem;
 }
 
 @media (min-width: 48rem) {
   body {
-    padding: 2rem;
+    padding: 5rem 2rem 5rem 2rem;
   }
 }
 
